@@ -641,8 +641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258.04895, y: -336}
-  m_SizeDelta: {x: 202.098, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 202.098, y: 297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697097534
 MonoBehaviour:
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[DIALOGUE]'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
   m_sharedMaterial: {fileID: 7792915863378875972, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
@@ -729,7 +729,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -503.07092, y: 0, z: -1001.45166, w: 0}
+  m_margin: {x: -751.70044, y: 0, z: -751.8347, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -775,10 +775,10 @@ RectTransform:
   - {fileID: 1697097533}
   m_Father: {fileID: 378610179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -7.687, y: 148.5}
+  m_SizeDelta: {x: 1699.4111, y: 297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915211399
 MonoBehaviour:
@@ -798,6 +798,7 @@ MonoBehaviour:
   lines:
   - Hello.
   - I have an offer to make.
+  - UHOJDSF;FGOIGHUIR;EOFJ[DM;LHRIDM;KFVJGITH59Y408U9U0TGRFD;JU0LTRU09[G
 --- !u!1 &2097702798
 GameObject:
   m_ObjectHideFlags: 0
