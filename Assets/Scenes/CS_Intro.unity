@@ -201,7 +201,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1377006679}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6888194
+  m_Size: 0.77220625
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -280,6 +280,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &345121520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 345121521}
+  - component: {fileID: 345121522}
+  m_Layer: 0
+  m_Name: DialogueSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &345121521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345121520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.14227, y: 355.7295, z: -7.3330903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345121522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345121520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6e56ea7afc7e541a552eff9a48c348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 1976465882}
+  scrollRect: {fileID: 1370266052}
+  typingSpeed: 0.02
+  scrollSpeed: 0.2
+  maxLines: 20
 --- !u!1 &365040351
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +807,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -300, y: 0}
-  m_SizeDelta: {x: 450, y: 1080}
+  m_SizeDelta: {x: 450, y: 1082}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370266052
 MonoBehaviour:
@@ -1052,7 +1101,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: abjkdasjkdajksdjkasdhkashdhkjlfdhkjlshfljkadsHJKLHKLDSUJGFHAFDSOGJ;LKSDFPDAOJGKLjklhfdsgfkkadjsflgffffgffffffffreuirjvalkslddoepwuiofhjaglkn.cdsx;jfruhvikdnslaeioruhy4liuwp3q[ls;';kejhgfyudkzsijcldfjhgteuoi3owpk;fruteryterutogyoilkdsjfhokildsajhfgioehrsoitu345y0grep[8ture'ohgvdifoghjap'gihfikpoahdfgphjfhdihogaoil;fdhkvjfikoghiortghyffhlkdfghhl;gjk;ljkp'l;iopsupirituiuhgiovkldfklvmfklhlsdkgnkldngvdklfngklgkfgjkgfjkdfgkljdfgjkljkldfgsljksdrfjhgsdkflvndcklgdsqhidgilewrhoiithjwefdl,s,vfcm,d.sg.sajkl;fjldkskk;djsa9opghirt[q32r8iueogvlk'fd;kgvfikldjgbiolfjo[sdfujgofdlpsjgpfidk;hgdfsiohgadijhfgioehrsoitu345y0grep[8ture'ohgvdifoghjap'gihfikpoahdfgphjfhdihogaoil;fdhkvjfikoghiortghyffhlkdfgDASGHJDFJKAKFHJLFLHLHK;LLKRIOOYTIRTYUIRTNabjkdasjkdajksdjkasdhkashdhkjlfdhkjlshfljkadsHJKLHKLDSUJGFHAFDSOGJ;LKSDFPDAOJGKLjklhfdsgfkkadjsflgffffgffffffffreuirjvalkslddoepwuiofhjaglkn.cdsx;jfruhvikdnslaeioruhy4liuwp3q[ls;';kejhgfyudkzsijcldfjhgteuoi3owpk;fruteryterutogyoilkdsjfhokildsajhfgioehrsoitu345y0grep[8ture'ohgvdifoghjap'gihfikpoahdfgphjfhdihogaoil;fdhkvjfikoghiortghyffhlkdfghhl;gjk;ljkp'l;iopsupirituiuhgiovkldfklvmfklhlsdkgnkldngvdklfngklgkfgjkgfjkdfgkljdfgjkljkldfgsljksdrfjhgsdkflvndcklgdsqhidgilewrhoiithjwefdl,s,vfcm,d.sg.sajkl;fjldkskk;djsa9opghirt[q32r8iueogvlk'fd;kgvfikldjgbiolfjo[sdfujgofdlpsjgpfidk;hgdfsiohgadijhfgioehrsoitu345y0grep[8ture'ohgvdifoghjap'gihfikpoahdfgphjfhdihogaoil;fdhkvjfikoghiortghyffhlkdfgDASGHJDFJKAKFHJLFLHLHK;LLKRIOOYTIRTYUIRTN
+  m_text: "\n\n\n\n\n\n\n\n\n\n\n\n\nSPEAKER: Spoken dialogue. More spoken dialogue.
+    Lorem ipsum whatever.\n\n1. [Player Choice]\n2. [Second Player Choice]\n\nPLAYER:
+    Player choice, in \"...\" if a reply was spoken. Figure out a way to make the
+    chosen answer appear in italics. If no spoken reply, it is formatted exactly
+    like...\n\nWritten narration, with no speaker assigned. This should really be
+    italicised too.\n\nSPEAKER: Continues dialogue, if applicable. \nSeriously, there's
+    a lot here. Hey, shouldn't this be scrollable by now? Maybe fix this...\n\nSPEAKER:
+    Why hello there."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
   m_sharedMaterial: {fileID: 7792915863378875972, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
@@ -1117,7 +1173,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 20, y: 0, z: 5, w: 0}
+  m_margin: {x: 30, y: 2, z: 30, w: 20}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1153,3 +1209,4 @@ SceneRoots:
   - {fileID: 429753180}
   - {fileID: 365040354}
   - {fileID: 1152381822}
+  - {fileID: 345121521}
