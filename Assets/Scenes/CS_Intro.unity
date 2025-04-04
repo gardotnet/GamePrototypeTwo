@@ -201,7 +201,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1377006679}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.77220625
+  m_Size: 0.57886344
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1101,14 +1101,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\n\n\n\n\n\n\n\n\n\n\nSPEAKER: Spoken dialogue. More spoken dialogue.
-    Lorem ipsum whatever.\n\n1. [Player Choice]\n2. [Second Player Choice]\n\nPLAYER:
-    Player choice, in \"...\" if a reply was spoken. Figure out a way to make the
-    chosen answer appear in italics. If no spoken reply, it is formatted exactly
-    like...\n\nWritten narration, with no speaker assigned. This should really be
-    italicised too.\n\nSPEAKER: Continues dialogue, if applicable. \nSeriously, there's
-    a lot here. Hey, shouldn't this be scrollable by now? Maybe fix this...\n\nSPEAKER:
-    Why hello there."
+  m_text: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSPEAKER: Spoken dialogue.
+    More spoken dialogue. Lorem ipsum whatever.\n\n1. [Player Choice]\n2. [Second
+    Player Choice]\n\nPLAYER: Player choice, in \"...\" if a reply was spoken. Figure
+    out a way to make the chosen answer appear in italics. If no spoken reply, it
+    is formatted exactly like...\n\nWritten narration, with no speaker assigned.
+    This should really be italicised too.\n\nSPEAKER: Continues dialogue, if applicable.
+    \nSeriously, there's a lot here. Hey, shouldn't this be auto-scrollable by now?
+    Maybe fix this...\n\nSPEAKER: Why hello there."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
   m_sharedMaterial: {fileID: 7792915863378875972, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
