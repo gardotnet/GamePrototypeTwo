@@ -201,7 +201,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1377006679}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.43007162
+  m_Size: 0.38087058
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -544,6 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: {fileID: 1976465882}
   scrollRect: {fileID: 1370266052}
+  dialogueTyping: {fileID: 1976465887}
 --- !u!1 &365040351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,7 +3305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1967286678931834da436d07fdbc7a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.05
+  textSpeed: 0.025
 --- !u!1001 &1978330180
 PrefabInstance:
   m_ObjectHideFlags: 0

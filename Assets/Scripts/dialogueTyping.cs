@@ -2,24 +2,18 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
-public class TypingEffect : MonoBehaviour {
-    public float textSpeed = 0.05f;
+public class dialogueTyping : MonoBehaviour {
 
-    private void Start() {
-        StartTyping();
-    }
+    public float textSpeed;
 
-    public void StartTyping() {
-        TextMeshProUGUI[] textObjects = GetComponentsInChildren<TextMeshProUGUI>();
-
-        foreach (TextMeshProUGUI textObject in textObjects) {
-            if (textObject != null) {
-                StartCoroutine(TypeText(textObject));
-            }
+    public void triggerTyping(Transform textObject) {
+        TextMeshProUGUI textComponent = textObject.GetComponent<TextMeshProUGUI>();
+        if (textComponent != null) {
+            StartCoroutine(startType(textComponent));
         }
     }
 
-    IEnumerator TypeText(TextMeshProUGUI textComponent) {
+    IEnumerator startType(TextMeshProUGUI textComponent) {
         string fullText = textComponent.text;
         textComponent.text = "";
         bool insideTag = false;

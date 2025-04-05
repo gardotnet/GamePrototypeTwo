@@ -1,38 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class dialogueInstancing: MonoBehaviour {
+public class dialogueInstancing : MonoBehaviour {
     [SerializeField] private Transform content;
     [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private dialogueTyping dialogueTyping;
 
     private int currentIndex = 0;
-    private Transform[] prefabChildren;
+    private Transform[] dialogueQueue;
 
     void Start() {
-        prefabChildren = new Transform[content.childCount];
+        dialogueQueue = new Transform[content.childCount];
 
         for (int i = 0; i < content.childCount; i++) {
-            prefabChildren[i] = content.GetChild(i);
-            prefabChildren[i].gameObject.SetActive(false);
+            dialogueQueue[i] = content.GetChild(i);
+            dialogueQueue[i].gameObject.SetActive(false);
         }
-        SetScrollPositionToBottom();
+        scrollDown();
     }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.X)) {
-            AddNewItem();
+            instantiateText();
         }
     }
 
-    void AddNewItem() {
-        Transform prefabToAdd = prefabChildren[currentIndex];
+    void instantiateText() {
+        Transform prefabToAdd = dialogueQueue[currentIndex];
         prefabToAdd.gameObject.SetActive(true);
+        dialogueTyping.triggerTyping(prefabToAdd);
+
         LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
-        SetScrollPositionToBottom();
-        currentIndex = (currentIndex + 1) % prefabChildren.Length;
+
+        scrollDown();
+        currentIndex = (currentIndex + 1) % dialogueQueue.Length;
     }
 
-    void SetScrollPositionToBottom() {
+    void scrollDown() {
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 0f;
     }
