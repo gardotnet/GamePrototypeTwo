@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.Events;
 
 public class dialogueTyping : MonoBehaviour {
 
     public float textSpeed;
+    public UnityEvent onTypingComplete;
 
     public void triggerTyping(Transform textObject) {
         TextMeshProUGUI textComponent = textObject.GetComponent<TextMeshProUGUI>();
@@ -37,5 +39,7 @@ public class dialogueTyping : MonoBehaviour {
                 currentText += fullText[i];
             }
         }
+
+        onTypingComplete?.Invoke();
     }
 }
