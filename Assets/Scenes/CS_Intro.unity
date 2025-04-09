@@ -549,8 +549,10 @@ MonoBehaviour:
   content: {fileID: 1976465882}
   scrollRect: {fileID: 1370266052}
   dialogueTyping: {fileID: 1976465887}
-  continueButtonPrefab: {fileID: 2776509932558663580, guid: a80c51756622baa449133b8f08872102, type: 3}
+  continuePrefab: {fileID: 2776509932558663580, guid: a80c51756622baa449133b8f08872102, type: 3}
+  bookendPrefab: {fileID: 2600420600110520145, guid: 3cdd37e3142b6a14b81fb3e7c51483c8, type: 3}
   audioManager: {fileID: 1553661582}
+  endDelay: 3
   onContinueButtonPressed:
     m_PersistentCalls:
       m_Calls:
@@ -2500,6 +2502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371202109}
   - component: {fileID: 1371202110}
+  - component: {fileID: 1371202111}
   m_Layer: 0
   m_Name: Art
   m_TagString: Untagged
@@ -2571,7 +2574,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5303463449528059925, guid: 3d7609d257f7d2344b727a93e7ebbbd2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.254717, g: 0.018022425, b: 0.11678587, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2581,6 +2584,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1371202111
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371202108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16c91e3ba26d32b4d881a74e86a1bdb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1377006678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,7 +3504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1967286678931834da436d07fdbc7a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.0025
+  textSpeed: 0.025
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
