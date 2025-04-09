@@ -97,9 +97,6 @@ public class dialogueInstancing : MonoBehaviour {
     }
 
     void endDialogue() {
-        foreach (Transform child in content) {
-            child.gameObject.SetActive(false);
-        }
         Instantiate(bookendPrefab, content);
     }
 
