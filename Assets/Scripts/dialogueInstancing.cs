@@ -8,12 +8,11 @@ public class dialogueInstancing : MonoBehaviour {
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private dialogueTyping dialogueTyping;
     [SerializeField] private GameObject continueButtonPrefab;
-    [SerializeField] private audioManager audioManager; // Reference to audioManager
+    [SerializeField] private audioManager audioManager;
 
     private int currentIndex = 0;
     private Transform[] dialogueQueue;
 
-    // Declare UnityEvent directly for page turn sound (for other triggers if needed)
     public UnityEvent onContinueButtonPressed;
 
     void Start() {
@@ -25,63 +24,82 @@ public class dialogueInstancing : MonoBehaviour {
         }
 
         dialogueTyping.onTypingComplete.AddListener(OnTypingComplete);
-        instantiateText();
+        instantiateText();  // Start the dialogue
     }
 
     void instantiateText() {
         if (currentIndex < dialogueQueue.Length) {
             Transform prefabToAdd = dialogueQueue[currentIndex];
             prefabToAdd.gameObject.SetActive(true);
+            Debug.Log($"Instantiating Text or Choice at index {currentIndex}");
 
-            // Check if the prefab is a text component and trigger typing
+            // If it's a regular TextMeshProUGUI (Dialogue Text)
             if (prefabToAdd.GetComponent<TextMeshProUGUI>() != null) {
+                Debug.Log("Text component found. Triggering typing.");
                 dialogueTyping.triggerTyping(prefabToAdd);
             }
-            // If it's a choice button, instantiate the button without triggering the event
+            // If it's a choice button
             else if (prefabToAdd.CompareTag("Choice")) {
+                Debug.Log("Choice button found. Adding listener.");
                 Button choiceButton = prefabToAdd.GetComponent<Button>();
                 choiceButton.onClick.AddListener(() => {
-                    // Handle choice selection but do not trigger the event here
-                    continueNext(); // Continue to the next dialogue
+                    Debug.Log("Choice button clicked. Proceeding to next dialogue.");
+                    continueNext(); // Proceed to next dialogue after choice is selected
                 });
             }
 
-            // Force the layout update and scroll
             LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
             scrollDown();
+        }
+        else {
+            Debug.LogError("No more dialogues to instantiate.");
         }
     }
 
     void OnTypingComplete() {
-        if (currentIndex < dialogueQueue.Length) {
-            // If it's a regular text (not a choice), create the continue button
-            if (!dialogueQueue[currentIndex].CompareTag("Choice")) {
-                GameObject continueButton = Instantiate(continueButtonPrefab, content);
-                Button buttonComponent = continueButton.GetComponent<Button>();
+        Debug.Log($"Typing completed for dialogue index {currentIndex}");
 
-                // Add listener to play sound when button is clicked
+        // Only instantiate continue button if it's not a choice
+        if (currentIndex < dialogueQueue.Length && !dialogueQueue[currentIndex].CompareTag("Choice")) {
+            Debug.Log("Instantiating continue button.");
+
+            GameObject continueButton = Instantiate(continueButtonPrefab, content);
+            Button buttonComponent = continueButton.GetComponent<Button>();
+            if (buttonComponent != null) {
                 buttonComponent.onClick.AddListener(() => {
-                    audioManager.PlayPageTurnSound();  // Play the sound when the button is clicked
-                    continueNext();                   // Proceed to the next dialogue
+                    Debug.Log("Continue button clicked. Playing page turn sound.");
+                    audioManager.PlayPageTurnSound();
+                    continueNext();
                 });
-
-                continueButton.SetActive(true);
             }
+            else {
+                Debug.LogError("Button component is missing on continue button prefab.");
+            }
+
+            continueButton.SetActive(true);
         }
 
-        currentIndex++;
+        // Remove index increment here, we’ll increment it in continueNext
     }
 
     void continueNext() {
-        // Destroy the continue button and proceed to the next dialogue
+        Debug.Log("Proceeding to next dialogue.");
+
+        // Destroy continue button if it exists
         GameObject continueButton = GameObject.FindWithTag("Continue");
         if (continueButton != null) {
             Destroy(continueButton);
         }
+
+        // Increment the index here to proceed to the next dialogue (text or choice)
+        currentIndex++; // Ensure index is incremented when moving to next dialogue.
+
+        // Ensure next dialogue is instantiated (whether text or choice)
         instantiateText();
     }
 
     void scrollDown() {
+        Debug.Log("Scrolling to bottom of the dialogue content.");
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 0f;
     }
