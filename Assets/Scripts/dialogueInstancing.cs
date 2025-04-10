@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class dialogueInstancing : MonoBehaviour {
@@ -18,6 +19,7 @@ public class dialogueInstancing : MonoBehaviour {
     private Transform[] dialogueQueue;
 
     public UnityEvent onContinueButtonPressed;
+    public UnityEvent onEndTriggered;
 
     void Start() {
         dialogueQueue = new Transform[content.childCount];
@@ -76,7 +78,7 @@ public class dialogueInstancing : MonoBehaviour {
         Button choiceButton = choicePrefab.GetComponent<Button>();
         if (choiceButton != null) {
             choiceButton.onClick.AddListener(() => {
-                audioManager.PlayPageTurnSound();
+                audioManager.playPageTurn();
                 currentIndex++;
                 continueNext();
             });
@@ -88,7 +90,7 @@ public class dialogueInstancing : MonoBehaviour {
         Button buttonComponent = continueButton.GetComponent<Button>();
         if (buttonComponent != null) {
             buttonComponent.onClick.AddListener(() => {
-                audioManager.PlayPageTurnSound();
+                audioManager.playPageTurn();
                 continueNext();
             });
         }
@@ -97,8 +99,16 @@ public class dialogueInstancing : MonoBehaviour {
     }
 
     void endDialogue() {
-        Instantiate(bookendPrefab, content);
+        GameObject endButton = Instantiate(bookendPrefab, content);
+        Button buttonComponent = endButton.GetComponent<Button>();
+        if (buttonComponent != null) {
+            buttonComponent.onClick.AddListener(() => {
+                audioManager.playShortBeep();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            });
+        }
     }
+    
 
     void continueNext() {
         GameObject continueButton = GameObject.FindWithTag("Continue");

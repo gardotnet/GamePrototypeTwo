@@ -1,15 +1,18 @@
 using UnityEngine;
 
 public class audioManager : MonoBehaviour {
-    private AudioSource page_turn;
+    [SerializeField] private AudioSource page_turn;
+    [SerializeField] private AudioSource short_beep;
 
-    void Start() {
-        page_turn = GetComponent<AudioSource>();
-    }
-
-    public void PlayPageTurnSound() {
+    public void playPageTurn() {
         if (page_turn != null) {
             page_turn.Play();
+        }
+    }
+
+    public void playShortBeep() {
+        if (short_beep != null) {
+            short_beep.Play();
         }
     }
 }
