@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afd05358198c4424cbe6bf9e42b03148
+guid: f0824909843943845bb520b8d7abf45d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - KarenFat
+  - Beanstalk
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
