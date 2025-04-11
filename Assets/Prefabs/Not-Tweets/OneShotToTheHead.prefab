@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 7466997736502355053}
   - component: {fileID: 4979703411200382440}
   - component: {fileID: 645771729215348104}
-  - component: {fileID: 4861044707685380859}
   m_Layer: 5
-  m_Name: Post 1
+  m_Name: OneShotToTheHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -165}
-  m_SizeDelta: {x: 719, y: 165}
+  m_SizeDelta: {x: 719, y: 140}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &4979703411200382440
 CanvasRenderer:
@@ -79,20 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4861044707685380859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323392052747059066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 0
 --- !u!1 &2678592865456017865
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@Username'
+  m_text: '@TheRepublikaPrint'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
   m_sharedMaterial: {fileID: 5265334970363988250, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
@@ -411,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -19.5, y: -50}
+  m_AnchoredPosition: {x: -19.5, y: -60.8}
   m_SizeDelta: {x: -69, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8775590897585385098
@@ -442,9 +427,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud '
+  m_text: "\"One Shot to the Head\"- Death Squad linked to killings in Republika
+    \nREAD HERE: republikaprint/report/201X/789e7rt6/death-squad-killings"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
@@ -471,8 +455,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 28.5
+  m_fontSizeBase: 28.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -509,7 +493,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 32.956726, w: 44.48535}
+  m_margin: {x: 0, y: 0, z: 0.20080544, w: 76.194824}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -576,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -68, y: 0}
+  m_AnchoredPosition: {x: -62, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7181216682443957902

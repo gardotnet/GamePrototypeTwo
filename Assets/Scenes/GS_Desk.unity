@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Republika News remembers Harambe, experts weigh in
+  m_text: The Republika Print remembers Harambe, experts weigh in
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
@@ -850,7 +850,8 @@ MonoBehaviour:
   content: {fileID: 640800066}
   feedPosts:
   - {fileID: 323392052747059066, guid: a229bd63ac3779347a83d6757132c1a2, type: 3}
-  - {fileID: 323392052747059066, guid: d616ec62be076b94c901688c81b3d013, type: 3}
+  - {fileID: 5386041152279549403, guid: 19f6e41fd0d417d4caca6f4473463a07, type: 3}
+  - {fileID: 3890543261017894131, guid: e38fde5d4e0bffc4db167787dd600b41, type: 3}
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
