@@ -14,7 +14,7 @@ public class feedInstancing : MonoBehaviour {
     }
 
     private IEnumerator postSpawning() {
-        while (true) {
+        while (content.childCount < 10) {
             float waitTime = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(waitTime);
             spawnPost();
