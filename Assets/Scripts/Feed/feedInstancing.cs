@@ -2,28 +2,26 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class feedInstancing : MonoBehaviour
-{
-    [SerializeField] private float spawnDelay;
+public class feedInstancing : MonoBehaviour {
+    [SerializeField] private float minDelay;
+    [SerializeField] private float maxDelay;
     [SerializeField] private Transform content;
 
     public List<GameObject> feedPosts;
-    private bool postDelay = true;
 
-    void Update(){
-        if (Input.GetKeyDown("space")){
-            StartCoroutine(spawnPacing());
+    void Start() {
+        StartCoroutine(postSpawning());
+    }
+
+    private IEnumerator postSpawning() {
+        while (true) {
+            float waitTime = Random.Range(minDelay, maxDelay);
+            yield return new WaitForSeconds(waitTime);
             spawnPost();
         }
-    } 
-
-    void spawnPost(){
-        if (!postDelay){
-            Instantiate(feedPosts[UnityEngine.Random.Range(0, feedPosts.Count)], content);
-        }
     }
-    private IEnumerator spawnPacing() {
-        yield return new WaitForSeconds(spawnDelay);
-        postDelay = false;
+
+    private void spawnPost() {
+        Instantiate(feedPosts[Random.Range(0, feedPosts.Count)], content);
     }
 }
