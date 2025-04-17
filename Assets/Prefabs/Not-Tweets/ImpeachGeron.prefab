@@ -119,7 +119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4522710505076130287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38758067536215483}
+        m_TargetAssemblyTypeName: postStats, Assembly-CSharp
+        m_MethodName: Retweet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &737493224273932509
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +415,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5663926044479664526}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38758067536215483}
+        m_TargetAssemblyTypeName: postStats, Assembly-CSharp
+        m_MethodName: Like
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6689302709743393572
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,9 +639,10 @@ GameObject:
   - component: {fileID: 3987423917880767869}
   - component: {fileID: 3653674679221517438}
   - component: {fileID: 5035307702937096817}
+  - component: {fileID: 38758067536215483}
   m_Layer: 5
   m_Name: ImpeachGeron
-  m_TagString: Untagged
+  m_TagString: FakeNews
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,3 +707,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &38758067536215483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917806468784501863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsGained:
+    m_PersistentCalls:
+      m_Calls: []
+  pointsLost:
+    m_PersistentCalls:
+      m_Calls: []

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Continue
   - Choice
+  - FakeNews
+  - RealNews
   layers:
   - Default
   - TransparentFX

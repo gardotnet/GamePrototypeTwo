@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 640800066}
   - component: {fileID: 640800067}
   - component: {fileID: 640800068}
+  - component: {fileID: 640800069}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -712,6 +713,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &640800069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640800065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsGained:
+    m_PersistentCalls:
+      m_Calls: []
+  pointsLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &668015430
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +922,8 @@ MonoBehaviour:
   - {fileID: 1718637388728336860, guid: ffd0179a0e85222409f8ef759ebe74d7, type: 3}
   - {fileID: 628316854199374847, guid: e38fde5d4e0bffc4db167787dd600b41, type: 3}
   - {fileID: 5247554340348590712, guid: 19d0d159e8ec08349a06545a42b298d8, type: 3}
+  - {fileID: 5858073675389007232, guid: a555044f4f726a140bc0f2728631e282, type: 3}
+  - {fileID: 4198038943442978963, guid: 7664132045de7374ebde2a27e5eb91a2, type: 3}
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0

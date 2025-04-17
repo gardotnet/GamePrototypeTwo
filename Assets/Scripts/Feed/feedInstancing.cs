@@ -14,7 +14,7 @@ public class feedInstancing : MonoBehaviour {
     }
 
     private IEnumerator postSpawning() {
-        while (content.childCount < 10) {
+        while (content.childCount < 10 && feedPosts.Count > 0) {
             float waitTime = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(waitTime);
             spawnPost();
@@ -22,6 +22,8 @@ public class feedInstancing : MonoBehaviour {
     }
 
     private void spawnPost() {
-        Instantiate(feedPosts[Random.Range(0, feedPosts.Count)], content);
+        int index = Random.Range(0, feedPosts.Count);
+        Instantiate(feedPosts[index], content);
+        feedPosts.RemoveAt(index);
     }
 }
