@@ -6,6 +6,8 @@ public class postStats : MonoBehaviour {
     public UnityEvent pointsLost;
 
     private bool isFakeNews;
+    private bool Liked;
+    private bool Retweeted;
     private int dailyEarnings = 0;
     private int playerMorality = 100;
 
@@ -14,7 +16,7 @@ public class postStats : MonoBehaviour {
     }
 
     public void Retweet() {
-        if (isFakeNews) {
+        if (isFakeNews && !Liked && !Retweeted) {
             addPoints(5);
             Debug.Log("Added 5 points for retweeting fake news. Total points: " + dailyEarnings);
         }
@@ -25,7 +27,7 @@ public class postStats : MonoBehaviour {
     }
 
     public void Like() {
-        if (isFakeNews) {
+        if (isFakeNews && !Retweeted && !Liked) {
             addPoints(1);
             Debug.Log("Added 1 point for liking fake news. Total points: " + dailyEarnings);
         }
