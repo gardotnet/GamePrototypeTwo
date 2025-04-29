@@ -8,13 +8,12 @@ public class postStats : MonoBehaviour {
     private bool isFakeNews;
     private bool Liked;
     private bool Retweeted;
-    private int dailyEarnings = 0;
+    public int dailyEarnings;
     private int playerMorality = 100;
 
     private void Start() {
         isFakeNews = gameObject.CompareTag("FakeNews");
     }
-
     public void Retweet() {
         if (isFakeNews && !Liked && !Retweeted) {
             addPoints(5);
