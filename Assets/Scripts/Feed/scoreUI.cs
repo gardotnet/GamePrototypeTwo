@@ -1,13 +1,13 @@
 using UnityEngine;
+using TMPro;  // Make sure TextMeshPro is included
 
-public class scoreUI : MonoBehaviour
-{
-    public postStats playerStats;
-    public TMPro.TextMeshProUGUI scoreLabel;
-    void Update()
-    {
-        if (playerStats != null){
-            scoreLabel.text =  "P-" + playerStats.dailyEarnings;
+public class scoreUI : MonoBehaviour {
+    public feedInstancing feedManager;  // Reference to the feed manager
+    public TextMeshProUGUI scoreLabel;
+
+    private void Update() {
+        if (feedManager != null && scoreLabel != null) {
+            scoreLabel.text = "P" + feedManager.GetTotalEarnings();
         }
     }
 }

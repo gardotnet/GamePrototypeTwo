@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 613087622}
   - component: {fileID: 613087621}
   m_Layer: 5
-  m_Name: Pesos Count
+  m_Name: Score Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,12 +866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsGained:
-    m_PersistentCalls:
-      m_Calls: []
-  pointsLost:
-    m_PersistentCalls:
-      m_Calls: []
   dailyEarnings: 0
 --- !u!114 &640800070
 MonoBehaviour:
@@ -885,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522ed3a2229df0b45ba81d764fd240d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 640800069}
+  feedManager: {fileID: 0}
   scoreLabel: {fileID: 613087621}
 --- !u!1 &668015430
 GameObject:
@@ -1036,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775576860}
   - component: {fileID: 775576861}
+  - component: {fileID: 775576862}
   m_Layer: 0
   m_Name: Feed Manager
   m_TagString: Untagged
@@ -1080,6 +1075,19 @@ MonoBehaviour:
   - {fileID: 5247554340348590712, guid: 19d0d159e8ec08349a06545a42b298d8, type: 3}
   - {fileID: 5858073675389007232, guid: a555044f4f726a140bc0f2728631e282, type: 3}
   - {fileID: 4198038943442978963, guid: 7664132045de7374ebde2a27e5eb91a2, type: 3}
+--- !u!114 &775576862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775576859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dailyEarnings: 0
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,11 +1886,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1539467726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4110468103264736815, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+  m_PrefabInstance: {fileID: 8938859149146565534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1539467727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2746008497997081128, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
   m_PrefabInstance: {fileID: 8938859149146565534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1539467729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539467726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522ed3a2229df0b45ba81d764fd240d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedManager: {fileID: 775576861}
+  scoreLabel: {fileID: 613087621}
 --- !u!1 &1589417173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,7 +2655,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4110468103264736815, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1539467729}
   m_SourcePrefab: {fileID: 100100000, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

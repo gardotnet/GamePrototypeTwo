@@ -9,6 +9,8 @@ public class feedInstancing : MonoBehaviour {
 
     public List<GameObject> feedPosts;
 
+    private List<postStats> allPostStats = new List<postStats>();
+
     void Start() {
         StartCoroutine(postSpawning());
     }
@@ -23,7 +25,21 @@ public class feedInstancing : MonoBehaviour {
 
     private void spawnPost() {
         int index = Random.Range(0, feedPosts.Count);
-        Instantiate(feedPosts[index], content);
+        GameObject newPost = Instantiate(feedPosts[index], content);
+
+        postStats stats = newPost.GetComponent<postStats>();
+        if (stats != null) {
+            allPostStats.Add(stats);
+        }
+        
         feedPosts.RemoveAt(index);
+    }
+
+    public int GetTotalEarnings() {
+        int totalEarnings = 0;
+        foreach (postStats stats in allPostStats) {
+            totalEarnings += stats.dailyEarnings;
+        }
+        return totalEarnings;
     }
 }

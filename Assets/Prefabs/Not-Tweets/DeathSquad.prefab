@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 38758067536215483}
   m_Layer: 5
   m_Name: DeathSquad
-  m_TagString: FakeNews
+  m_TagString: RealNews
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -744,10 +744,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsGained:
-    m_PersistentCalls:
-      m_Calls: []
-  pointsLost:
-    m_PersistentCalls:
-      m_Calls: []
   dailyEarnings: 0

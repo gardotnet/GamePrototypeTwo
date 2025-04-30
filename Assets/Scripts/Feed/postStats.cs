@@ -1,70 +1,49 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class postStats : MonoBehaviour {
-    public UnityEvent pointsGained;
-    public UnityEvent pointsLost;
+    public event Action<int> OnPointsGained;
+    public event Action<int> OnPointsLost;
 
     private bool isFakeNews;
-    private bool Liked;
-    private bool Retweeted;
-    public int dailyEarnings;
-    private int playerMorality = 100;
+    private bool liked;
+    private bool retweeted;
 
+    public int dailyEarnings;
+
+    private int playerMorality = 100;
     private Button button;
-    private bool isPressed;
 
     private void Start() {
         isFakeNews = gameObject.CompareTag("FakeNews");
-        button = GetComponent<Button>();
+        button = GetComponentInChildren<Button>();
     }
 
     public void Retweet() {
-        if (Liked) {
-            return;
-        }
+        if (liked || retweeted) return;
 
-        if (!Retweeted) {
-            Retweeted = true;
-
-            if (isFakeNews) {
-                addPoints(5);
-            }
-            else {
-                subtractPoints(5);
-            }
-        }
+        retweeted = true;
+        UpdateStats(isFakeNews ? 5 : -5);
     }
 
     public void Like() {
-        if (Retweeted) {
-            return;
-        }
+        if (retweeted || liked) return;
 
-        if (!Liked) {
-            Liked = true;
-
-            if (isFakeNews) {
-                addPoints(1);
-            }
-            else {
-                subtractPoints(1);
-            }
-        }
+        liked = true;
+        UpdateStats(isFakeNews ? 1 : -1);
     }
 
-
-    private void addPoints(int points) {
-        dailyEarnings += points;
+    private void UpdateStats(int points) {
+        dailyEarnings = Mathf.Max(0, dailyEarnings + points);
         modifyMorality(-points);
-        pointsGained.Invoke();
-    }
 
-    private void subtractPoints(int points) {
-        dailyEarnings -= points;
-        modifyMorality(points);
-        pointsLost.Invoke();
+        if (points > 0) {
+            OnPointsGained?.Invoke(points);
+        }
+        else {
+            OnPointsLost?.Invoke(points);
+        }
     }
 
     private void modifyMorality(int amount) {
