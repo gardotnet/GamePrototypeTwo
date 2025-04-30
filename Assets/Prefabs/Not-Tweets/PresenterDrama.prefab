@@ -297,6 +297,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8232162392886210066, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+        m_TargetAssemblyTypeName: buttonInteraction, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7948681331057652985}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5423718061143294173
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +571,7 @@ MonoBehaviour:
   pointsLost:
     m_PersistentCalls:
       m_Calls: []
+  dailyEarnings: 0
 --- !u!1 &5926258651024103562
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +699,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8232162392886210066, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+        m_TargetAssemblyTypeName: buttonInteraction, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3663117059802258829}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

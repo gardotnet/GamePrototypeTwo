@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class postStats : MonoBehaviour {
     public UnityEvent pointsGained;
@@ -11,30 +12,48 @@ public class postStats : MonoBehaviour {
     public int dailyEarnings;
     private int playerMorality = 100;
 
+    private Button button;
+    private bool isPressed;
+
     private void Start() {
         isFakeNews = gameObject.CompareTag("FakeNews");
+        button = GetComponent<Button>();
     }
+
     public void Retweet() {
-        if (isFakeNews && !Liked && !Retweeted) {
-            addPoints(5);
-            Debug.Log("Added 5 points for retweeting fake news. Total points: " + dailyEarnings);
+        if (Liked) {
+            return;
         }
-        else {
-            subtractPoints(5);
-            Debug.Log("Lost 5 points for retweeting real news. Total points: " + dailyEarnings);
+
+        if (!Retweeted) {
+            Retweeted = true;
+
+            if (isFakeNews) {
+                addPoints(5);
+            }
+            else {
+                subtractPoints(5);
+            }
         }
     }
 
     public void Like() {
-        if (isFakeNews && !Retweeted && !Liked) {
-            addPoints(1);
-            Debug.Log("Added 1 point for liking fake news. Total points: " + dailyEarnings);
+        if (Retweeted) {
+            return;
         }
-        else {
-            subtractPoints(1);
-            Debug.Log("Lost 1 point for liking real news. Total points: " + dailyEarnings);
+
+        if (!Liked) {
+            Liked = true;
+
+            if (isFakeNews) {
+                addPoints(1);
+            }
+            else {
+                subtractPoints(1);
+            }
         }
     }
+
 
     private void addPoints(int points) {
         dailyEarnings += points;

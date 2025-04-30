@@ -7,7 +7,7 @@ public class scoreUI : MonoBehaviour
     void Update()
     {
         if (playerStats != null){
-            scoreLabel.text =  "P" + playerStats.dailyEarnings;
+            scoreLabel.text =  "P-" + playerStats.dailyEarnings;
         }
     }
 }
