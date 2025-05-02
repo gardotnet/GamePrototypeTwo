@@ -9,8 +9,14 @@ public class CameraBehaviour : MonoBehaviour {
     public Vector2 maxBounds = new Vector2(10f, 5f);
 
     private Vector3 lastMousePosition;
+    [SerializeField] private GameObject cameraManager;
 
-    void Start() {
+    void Start()
+    {
+        cameraManager.SetActive(false);
+    }
+    public void unlockCamera(){
+        cameraManager.SetActive(true);
         mainCamera ??= Camera.main;
         UpdateLastMousePosition();
     }

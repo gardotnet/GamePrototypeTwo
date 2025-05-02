@@ -24,26 +24,34 @@ public class postStats : MonoBehaviour {
         if (liked || retweeted) return;
 
         retweeted = true;
-        UpdateStats(isFakeNews ? 5 : -5);
+        if (gameObject.CompareTag("FakeNews")){
+            addPesos(50);
+            OnPointsGained?.Invoke(50);
+        } else if (gameObject.CompareTag("RealNews")){
+            losePesos(50);
+            OnPointsLost?.Invoke(50);
+        }
     }
 
     public void Like() {
         if (retweeted || liked) return;
-
         liked = true;
-        UpdateStats(isFakeNews ? 1 : -1);
+
+        if (gameObject.CompareTag("FakeNews")){
+            addPesos(10);
+            OnPointsGained?.Invoke(10);
+        } else if (gameObject.CompareTag("RealNews")){
+            losePesos(10);
+            OnPointsLost?.Invoke(10);
+        }
     }
 
-    private void UpdateStats(int points) {
-        dailyEarnings = Mathf.Max(0, dailyEarnings + points);
-        modifyMorality(-points);
+    private void addPesos(int pesos){
+        dailyEarnings += pesos;
+    }
 
-        if (points > 0) {
-            OnPointsGained?.Invoke(points);
-        }
-        else {
-            OnPointsLost?.Invoke(points);
-        }
+    private void losePesos(int pesos){
+        dailyEarnings -= pesos;
     }
 
     private void modifyMorality(int amount) {

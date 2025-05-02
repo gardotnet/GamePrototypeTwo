@@ -11,8 +11,10 @@ public class feedInstancing : MonoBehaviour {
 
     private List<postStats> allPostStats = new List<postStats>();
 
-    void Start() {
+    
+    public void beginDay(){
         StartCoroutine(postSpawning());
+        Debug.Log("guh");
     }
 
     private IEnumerator postSpawning() {
