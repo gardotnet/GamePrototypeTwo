@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour {
     public Camera mainCamera;
-    public float followSpeed = 5f;
-    public float moveThreshold = 0.01f;
+    public float followSpeed = 1.5f;
+
 
     public Vector2 minBounds = new Vector2(-10f, -5f);
     public Vector2 maxBounds = new Vector2(10f, 5f);
@@ -18,7 +18,7 @@ public class CameraBehaviour : MonoBehaviour {
     void Update() {
         Vector3 mousePosition = GetMouseWorldPosition();
 
-        if (Vector3.Distance(mousePosition, lastMousePosition) > moveThreshold) {
+        if (Vector3.Distance(mousePosition, lastMousePosition) > 0) {
             Vector3 smoothPosition = Vector3.Lerp(mainCamera.transform.position, mousePosition, followSpeed * Time.deltaTime);
             mainCamera.transform.position = ClampPosition(smoothPosition);
             lastMousePosition = mousePosition;
