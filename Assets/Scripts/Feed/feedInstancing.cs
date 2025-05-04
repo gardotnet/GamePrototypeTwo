@@ -14,7 +14,6 @@ public class feedInstancing : MonoBehaviour {
     
     public void beginDay(){
         StartCoroutine(postSpawning());
-        Debug.Log("guh");
     }
 
     private IEnumerator postSpawning() {

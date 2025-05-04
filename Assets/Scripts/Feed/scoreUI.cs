@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;  // Make sure TextMeshPro is included
+using TMPro;
 
 public class scoreUI : MonoBehaviour {
     public feedInstancing feedManager;
