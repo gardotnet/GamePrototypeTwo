@@ -4,7 +4,6 @@ public class CameraBehaviour : MonoBehaviour {
     public Camera mainCamera;
     public float followSpeed = 1.5f;
 
-
     public Vector2 minBounds = new Vector2(-10f, -5f);
     public Vector2 maxBounds = new Vector2(10f, 5f);
 

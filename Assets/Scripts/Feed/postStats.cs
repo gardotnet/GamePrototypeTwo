@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class postStats : MonoBehaviour {
     public event Action<int> OnPointsGained;
     public event Action<int> OnPointsLost;
+
+    public UnityEvent pesosGained;
 
     private bool isFakeNews;
     private bool liked;
@@ -27,6 +30,7 @@ public class postStats : MonoBehaviour {
         if (gameObject.CompareTag("FakeNews")){
             addPesos(50);
             OnPointsGained?.Invoke(50);
+            pesosGained?.Invoke();
         } else if (gameObject.CompareTag("RealNews")){
             losePesos(50);
             OnPointsLost?.Invoke(50);
@@ -40,6 +44,7 @@ public class postStats : MonoBehaviour {
         if (gameObject.CompareTag("FakeNews")){
             addPesos(10);
             OnPointsGained?.Invoke(10);
+            pesosGained?.Invoke();
         } else if (gameObject.CompareTag("RealNews")){
             losePesos(10);
             OnPointsLost?.Invoke(10);
