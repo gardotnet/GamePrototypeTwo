@@ -1246,6 +1246,7 @@ MonoBehaviour:
   - {fileID: 5858073675389007232, guid: a555044f4f726a140bc0f2728631e282, type: 3}
   - {fileID: 5247554340348590712, guid: 19d0d159e8ec08349a06545a42b298d8, type: 3}
   - {fileID: 4198038943442978963, guid: 7664132045de7374ebde2a27e5eb91a2, type: 3}
+  - {fileID: 7917806468784501863, guid: c54efe7e8b5880644ac1242137b316c5, type: 3}
 --- !u!114 &775576862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,7 +2991,7 @@ MonoBehaviour:
     that share the reality of other candidates' uncouth behaviour. Amplify their
     reach and create engagement with a repost or like. Lead opinion. \r\n\r\nWe\u2019ve
     provided a router and SIM for you to use. You will be compensated in-line with
-    your performance.\r\n\r\nYou have 5 working days until the election. Make those
+    your performance.\r\n\r\nYou have 3 days until the election on Monday. Make those
     hours count.\r\n\r\nTo God be the glory.\r\n\r\nFrom the desk of H.E. delos Santos\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
