@@ -120,9 +120,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7316624813938408240, guid: 45707413f6c9f8248be131a9d2f805e8, type: 3}
-        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
-        m_MethodName: currentMusic
+      - m_Target: {fileID: 6384724680258826479, guid: b03c2ed88c8ac9f4b915b6cc940c8ecb, type: 3}
+        m_TargetAssemblyTypeName: sceneManager, Assembly-CSharp
+        m_MethodName: startGameplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

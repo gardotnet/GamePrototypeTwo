@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MS_Definition.unity
+    guid: fb3c39ca61310134684d99b25e1dfc17
+  - enabled: 1
     path: Assets/Scenes/CS_Intro.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: 32e812cd0094eec429731891ef2f6775
   - enabled: 1
     path: Assets/Scenes/GS_Desk.unity
     guid: be733db6c7901854e92e095436b53847
