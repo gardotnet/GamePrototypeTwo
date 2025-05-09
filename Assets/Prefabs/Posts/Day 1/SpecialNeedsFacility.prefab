@@ -210,8 +210,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presidential Candidate Keon Villamiel canvasses City of Man, pledging
-    to his \u2018tsinelas leadership\u2019 if elected on Monday."
+  m_text: 'First in Metro CoM: Facility for kids with special needs opens thanks
+    to funding from D.R.R and family'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@TheRepublikaPrint'
+  m_text: '@DRR_newsfiles'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
   m_sharedMaterial: {fileID: 5265334970363988250, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
@@ -665,8 +665,8 @@ GameObject:
   - component: {fileID: 5035307702937096817}
   - component: {fileID: 38758067536215483}
   m_Layer: 5
-  m_Name: TsinelasLeadership
-  m_TagString: RealNews
+  m_Name: SpecialNeedsFacility
+  m_TagString: FakeNews
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

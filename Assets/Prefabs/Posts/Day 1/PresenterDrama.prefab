@@ -565,10 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsGained:
-    m_PersistentCalls:
-      m_Calls: []
-  pointsLost:
+  pesosGained:
     m_PersistentCalls:
       m_Calls: []
   dailyEarnings: 0
