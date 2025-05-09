@@ -20,6 +20,10 @@ public class CameraBehaviour : MonoBehaviour {
         UpdateLastMousePosition();
     }
 
+    public void lockCamera(){
+        cameraManager.SetActive(false);
+    }
+
     void Update() {
         Vector3 mousePosition = GetMouseWorldPosition();
 

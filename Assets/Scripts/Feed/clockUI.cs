@@ -6,6 +6,8 @@ public class clockUI : MonoBehaviour {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] UnityEvent onHourIncrement;
 
+    [SerializeField] public float realTimeToGameHours;
+
     public UnityEvent nightEnd;
 
     private float elapsedTime = 0f;
@@ -19,7 +21,7 @@ public class clockUI : MonoBehaviour {
 
         elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= 14.5f) {
+        if (elapsedTime >= realTimeToGameHours) {
             hours++;
             elapsedTime = 0f;
 

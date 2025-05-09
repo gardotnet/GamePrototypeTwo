@@ -6,6 +6,7 @@ public class feedInstancing : MonoBehaviour {
     [SerializeField] private float minDelay;
     [SerializeField] private float maxDelay;
     [SerializeField] private Transform content;
+    [SerializeField] private GameObject feedManager;
 
     public List<GameObject> feedPosts;
 
@@ -16,8 +17,13 @@ public class feedInstancing : MonoBehaviour {
         StartCoroutine(postSpawning());
     }
 
+    public void endDay(){
+        feedManager.SetActive(false);
+        StopCoroutine(postSpawning());
+    }
+
     private IEnumerator postSpawning() {
-        while (content.childCount < 10 && feedPosts.Count > 0) {
+        while (content.childCount < 14 && feedPosts.Count > 0) {
             float waitTime = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(waitTime);
             spawnPost();

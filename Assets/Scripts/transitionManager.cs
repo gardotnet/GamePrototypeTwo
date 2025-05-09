@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class transitionManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private clockUI clockUI;
 
     private bool _fadein = false;
     private bool _fadeout = false;
@@ -17,7 +16,6 @@ public class transitionManager : MonoBehaviour
     void Start()
     {
         canvasGroup.gameObject.SetActive(false);
-        clockUI.nightEnd.AddListener(fadeOut);
     }
     
     void Update()
@@ -42,13 +40,11 @@ public class transitionManager : MonoBehaviour
     }
 
     public void fadeIn(){
-        Debug.Log("Fading in");
         canvasGroup.gameObject.SetActive(true);
         _fadein = true;
     }
 
     public void fadeOut(){
-        Debug.Log ("Fading out");
         _fadeout = true;
     }
 
