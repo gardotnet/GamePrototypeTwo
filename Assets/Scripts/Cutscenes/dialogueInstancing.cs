@@ -11,7 +11,7 @@ public class dialogueInstancing : MonoBehaviour {
     [SerializeField] private dialogueTyping dialogueTyping;
     [SerializeField] private GameObject continuePrefab;
     [SerializeField] private GameObject bookendPrefab;
-    [SerializeField] private audioManager audioManager;
+    [SerializeField] private CS_audioManager CS_audioManager;
 
     [SerializeField] private float endDelay = 3f;
 
@@ -78,7 +78,7 @@ public class dialogueInstancing : MonoBehaviour {
         Button choiceButton = choicePrefab.GetComponent<Button>();
         if (choiceButton != null) {
             choiceButton.onClick.AddListener(() => {
-                audioManager.playPageTurn();
+                CS_audioManager.playPageTurn();
                 currentIndex++;
                 continueNext();
             });
@@ -90,7 +90,7 @@ public class dialogueInstancing : MonoBehaviour {
         Button buttonComponent = continueButton.GetComponent<Button>();
         if (buttonComponent != null) {
             buttonComponent.onClick.AddListener(() => {
-                audioManager.playPageTurn();
+                CS_audioManager.playPageTurn();
                 continueNext();
             });
         }
@@ -103,7 +103,7 @@ public class dialogueInstancing : MonoBehaviour {
         Button buttonComponent = endButton.GetComponent<Button>();
         if (buttonComponent != null) {
             buttonComponent.onClick.AddListener(() => {
-                audioManager.playShortBeep();
+                CS_audioManager.playShortBeep();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             });
         }

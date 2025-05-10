@@ -27,11 +27,13 @@ public class postStats : MonoBehaviour {
         if (liked || retweeted) return;
 
         retweeted = true;
-        if (gameObject.CompareTag("FakeNews")){
+        if (gameObject.CompareTag("FakeNews")) {
             addPesos(50);
             OnPointsGained?.Invoke(50);
+            Debug.Log("pesosGained event is about to be invoked in Retweet.");
             pesosGained?.Invoke();
-        } else if (gameObject.CompareTag("RealNews")){
+        }
+        else if (gameObject.CompareTag("RealNews")) {
             losePesos(50);
             OnPointsLost?.Invoke(50);
         }
@@ -41,15 +43,18 @@ public class postStats : MonoBehaviour {
         if (retweeted || liked) return;
         liked = true;
 
-        if (gameObject.CompareTag("FakeNews")){
+        if (gameObject.CompareTag("FakeNews")) {
             addPesos(10);
             OnPointsGained?.Invoke(10);
+            Debug.Log("pesosGained event is about to be invoked in Like.");
             pesosGained?.Invoke();
-        } else if (gameObject.CompareTag("RealNews")){
+        }
+        else if (gameObject.CompareTag("RealNews")) {
             losePesos(10);
             OnPointsLost?.Invoke(10);
         }
     }
+
 
     private void addPesos(int pesos){
         dailyEarnings += pesos;

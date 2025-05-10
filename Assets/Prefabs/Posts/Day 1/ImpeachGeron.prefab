@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 38758067536215483}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: postStats, Assembly-CSharp
         m_MethodName: Retweet
         m_Mode: 1
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 38758067536215483}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: postStats, Assembly-CSharp
         m_MethodName: Like
         m_Mode: 1
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 3987423917880767869}
   - component: {fileID: 3653674679221517438}
   - component: {fileID: 5035307702937096817}
-  - component: {fileID: 38758067536215483}
+  - component: {fileID: 5916133180878171475}
   m_Layer: 5
   m_Name: ImpeachGeron
   m_TagString: FakeNews
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &38758067536215483
+--- !u!114 &5916133180878171475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -743,10 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsGained:
-    m_PersistentCalls:
-      m_Calls: []
-  pointsLost:
+  pesosGained:
     m_PersistentCalls:
       m_Calls: []
   dailyEarnings: 0
