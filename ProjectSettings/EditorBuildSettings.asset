@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MS_Definition.unity
     guid: fb3c39ca61310134684d99b25e1dfc17
   - enabled: 1
-    path: Assets/Scenes/CS_Intro.unity
+    path: Assets/Scenes/GS_Intro.unity
     guid: 32e812cd0094eec429731891ef2f6775
   - enabled: 1
     path: Assets/Scenes/GS_Desk.unity

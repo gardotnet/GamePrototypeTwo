@@ -693,6 +693,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1584303924}
+        m_TargetAssemblyTypeName: clockUI, Assembly-CSharp
+        m_MethodName: startClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6491654257575477687}
+        m_TargetAssemblyTypeName: scoreUI, Assembly-CSharp
+        m_MethodName: startScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289649392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +856,11 @@ Transform:
   - {fileID: 19111450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &588926681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4110468103264736815, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+  m_PrefabInstance: {fileID: 8938859149146565534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613087619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1090,7 @@ MonoBehaviour:
   feedManager: {fileID: 775576861}
   scoreLabel: {fileID: 613087621}
   dayTotalLabel: {fileID: 2056458864}
+  interactionManager: {fileID: 0}
 --- !u!1 &668015430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1240,6 @@ GameObject:
   m_Component:
   - component: {fileID: 775576860}
   - component: {fileID: 775576861}
-  - component: {fileID: 775576862}
   m_Layer: 0
   m_Name: Feed Manager
   m_TagString: Untagged
@@ -1258,34 +1287,6 @@ MonoBehaviour:
   - {fileID: 5858073675389007232, guid: 1dadd042677e634468f4eafb7cd81dc3, type: 3}
   - {fileID: 7917806468784501863, guid: 7a18aad26aa7084449bd6f7471e07cb7, type: 3}
   - {fileID: 7917806468784501863, guid: a73089185c3660643b7a5f2324eaebe3, type: 3}
---- !u!114 &775576862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775576859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7911419439ee86d42b7d381a0e2f8eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pesosGained:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 194311473}
-        m_TargetAssemblyTypeName: GS_audioManager, Assembly-CSharp
-        m_MethodName: playCoinShimmer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  dailyEarnings: 0
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2566,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2408850552391095601, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
   m_PrefabInstance: {fileID: 8938859149146565534}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 588926681}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0b82ac4753c4da4b955dca6615decf1, type: 3}
@@ -2632,6 +2633,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   realTimeToGameHours: 14.5
+  clockManager: {fileID: 1584303922}
   nightEnd:
     m_PersistentCalls:
       m_Calls:
@@ -3675,6 +3677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 456642819}
     m_Modifications:
+    - target: {fileID: 1756086403234411833, guid: c6dcb1d90f9e6ed49a8f9f2b185bec90, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204931394214104357, guid: c6dcb1d90f9e6ed49a8f9f2b185bec90, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -3719,7 +3725,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1756086403234411833, guid: c6dcb1d90f9e6ed49a8f9f2b185bec90, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3729,6 +3736,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2746008497997081128, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
   m_PrefabInstance: {fileID: 8938859149146565534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6491654257575477687 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5325865090885264714, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+  m_PrefabInstance: {fileID: 8938859149146565534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588926681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522ed3a2229df0b45ba81d764fd240d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8938859149146565534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3797,6 +3815,10 @@ PrefabInstance:
       propertyPath: dayTotalLabel
       value: 
       objectReference: {fileID: 2056458864}
+    - target: {fileID: 5325865090885264714, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
+      propertyPath: interactionManager
+      value: 
+      objectReference: {fileID: 588926681}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -30,7 +30,6 @@ public class postStats : MonoBehaviour {
         if (gameObject.CompareTag("FakeNews")) {
             addPesos(50);
             OnPointsGained?.Invoke(50);
-            Debug.Log("pesosGained event is about to be invoked in Retweet.");
             pesosGained?.Invoke();
         }
         else if (gameObject.CompareTag("RealNews")) {
@@ -46,7 +45,6 @@ public class postStats : MonoBehaviour {
         if (gameObject.CompareTag("FakeNews")) {
             addPesos(10);
             OnPointsGained?.Invoke(10);
-            Debug.Log("pesosGained event is about to be invoked in Like.");
             pesosGained?.Invoke();
         }
         else if (gameObject.CompareTag("RealNews")) {

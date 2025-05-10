@@ -583,7 +583,7 @@ MonoBehaviour:
   dialogueTyping: {fileID: 1976465887}
   continuePrefab: {fileID: 2776509932558663580, guid: a80c51756622baa449133b8f08872102, type: 3}
   bookendPrefab: {fileID: 2600420600110520145, guid: 3cdd37e3142b6a14b81fb3e7c51483c8, type: 3}
-  audioManager: {fileID: 1361623093}
+  CS_audioManager: {fileID: 1361623095}
   endDelay: 3
   onContinueButtonPressed:
     m_PersistentCalls:
@@ -2854,7 +2854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1361623089}
-  - component: {fileID: 1361623093}
+  - component: {fileID: 1361623095}
   - component: {fileID: 1361623092}
   - component: {fileID: 1361623091}
   - component: {fileID: 1361623090}
@@ -3172,23 +3172,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1361623093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361623088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e90b7366c67e0409f1171c0ed2de8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pageTurn: {fileID: 1361623091}
-  shortBeep: {fileID: 1361623092}
-  clockTick: {fileID: 1361623090}
-  coinShimmer: {fileID: 1361623094}
-  postStats: {fileID: 0}
 --- !u!82 &1361623094
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3286,6 +3269,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1361623095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361623088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7a7ef89f5856d4d9894582f87b1e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageTurn: {fileID: 1361623091}
+  shortBeep: {fileID: 1361623092}
 --- !u!1 &1370266050
 GameObject:
   m_ObjectHideFlags: 0

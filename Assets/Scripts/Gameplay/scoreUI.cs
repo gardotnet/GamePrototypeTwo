@@ -6,6 +6,15 @@ public class scoreUI : MonoBehaviour {
     public feedInstancing feedManager;
     public TextMeshProUGUI scoreLabel;
     public TextMeshProUGUI dayTotalLabel;
+    [SerializeField] GameObject interactionManager;
+
+    void Start() {
+        interactionManager.SetActive(false);
+    }
+
+    public void startScore() {
+        interactionManager.SetActive(true);
+    }
 
     private void scoreLabelSwap(){
         if (dayTotalLabel.enabled == true) {
