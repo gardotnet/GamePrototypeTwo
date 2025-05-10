@@ -1090,7 +1090,7 @@ MonoBehaviour:
   feedManager: {fileID: 775576861}
   scoreLabel: {fileID: 613087621}
   dayTotalLabel: {fileID: 2056458864}
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 588926681}
 --- !u!1 &668015430
 GameObject:
   m_ObjectHideFlags: 0
