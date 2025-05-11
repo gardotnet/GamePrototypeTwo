@@ -12,7 +12,7 @@ public class statisticsManager : MonoBehaviour
     public void printTotal() {
         dayTotal.enabled = true;
         if (feedManager != null && dayTotal != null) {
-            dayTotal.text = "P" + feedManager.GetTotalEarnings();
+            dayTotal.text = "P" + feedManager.getTotalEarnings();
         }
     }
 }

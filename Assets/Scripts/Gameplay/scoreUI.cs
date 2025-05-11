@@ -23,7 +23,7 @@ public class scoreUI : MonoBehaviour {
     }
     private void Update() {
         if (feedManager != null && scoreLabel != null) {
-            scoreLabel.text = "P" + feedManager.GetTotalEarnings();
+            scoreLabel.text = "P" + feedManager.getTotalEarnings();
         }
 
         if (dayTotalLabel.enabled == true) {

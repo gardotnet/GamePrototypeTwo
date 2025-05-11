@@ -8,22 +8,34 @@ public class feedInstancing : MonoBehaviour {
     [SerializeField] private Transform content;
     [SerializeField] private GameObject feedManager;
 
-    public List<GameObject> feedPosts;
+    public List<GameObject> dayOne;
+    public List<GameObject> dayTwo;
+    public List<GameObject> dayThree;
 
     private List<postStats> allPostStats = new List<postStats>();
+    private List<List<GameObject>> allDays;
 
-    
-    public void beginDay(){
+    private int currentDayIndex = 0;
+
+    private void Start() {
+        allDays = new List<List<GameObject>> {
+            dayOne,
+            dayTwo,
+            dayThree
+        };
+    }
+
+    public void beginDay() {
         StartCoroutine(postSpawning());
     }
 
-    public void endDay(){
+    public void endDay() {
         feedManager.SetActive(false);
         StopCoroutine(postSpawning());
     }
 
     private IEnumerator postSpawning() {
-        while (content.childCount < 14 && feedPosts.Count > 0) {
+        while (content.childCount < 14 && allDays[currentDayIndex].Count > 0) {
             float waitTime = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(waitTime);
             spawnPost();
@@ -31,22 +43,27 @@ public class feedInstancing : MonoBehaviour {
     }
 
     private void spawnPost() {
-        int index = Random.Range(0, feedPosts.Count);
-        GameObject newPost = Instantiate(feedPosts[index], content);
+        int index = Random.Range(0, allDays[currentDayIndex].Count);
+        GameObject newPost = Instantiate(allDays[currentDayIndex][index], content);
 
         postStats stats = newPost.GetComponent<postStats>();
         if (stats != null) {
             allPostStats.Add(stats);
         }
-        
-        feedPosts.RemoveAt(index);
+
+        allDays[currentDayIndex].RemoveAt(index);
     }
 
-    public int GetTotalEarnings() {
+    public int getTotalEarnings() {
         int totalEarnings = 0;
         foreach (postStats stats in allPostStats) {
             totalEarnings += stats.dailyEarnings;
         }
         return totalEarnings;
+    }
+
+    public void nextDay() {
+        currentDayIndex = (currentDayIndex + 1) % allDays.Count;
+        Debug.Log($"Day indexed to: {currentDayIndex + 1}");
     }
 }
