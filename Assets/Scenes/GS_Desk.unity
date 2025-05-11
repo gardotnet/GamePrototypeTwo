@@ -1223,6 +1223,45 @@ MonoBehaviour:
   - {fileID: 7917806468784501863, guid: 5d1210941b2a35946bdfc8085180a7a4, type: 3}
   - {fileID: 4198038943442978963, guid: 7664132045de7374ebde2a27e5eb91a2, type: 3}
   dayThree: []
+  whenNextDay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 775576861}
+        m_TargetAssemblyTypeName: feedInstancing, Assembly-CSharp
+        m_MethodName: beginDay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1584303924}
+        m_TargetAssemblyTypeName: clockUI, Assembly-CSharp
+        m_MethodName: resetClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 588926681}
+        m_TargetAssemblyTypeName: clockUI, Assembly-CSharp
+        m_MethodName: resetClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2813,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  realTimeToGameHours: 2
+  realTimeToGameHours: 0.5
   clockManager: {fileID: 1584303922}
   nightEnd:
     m_PersistentCalls:
@@ -3525,9 +3564,57 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1539467730}
+        m_TargetAssemblyTypeName: menuManager, Assembly-CSharp
+        m_MethodName: toggleOffDayEndMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 925748306}
+        m_TargetAssemblyTypeName: transitionManager, Assembly-CSharp
+        m_MethodName: fadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 775576861}
         m_TargetAssemblyTypeName: feedInstancing, Assembly-CSharp
         m_MethodName: nextDay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 668015431}
+        m_TargetAssemblyTypeName: CameraBehaviour, Assembly-CSharp
+        m_MethodName: unlockCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6491654257575477687}
+        m_TargetAssemblyTypeName: scoreUI, Assembly-CSharp
+        m_MethodName: enableScoreLabel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4038,7 +4125,7 @@ PrefabInstance:
     - target: {fileID: 2408850552391095601, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
       propertyPath: dayEndMenu
       value: 
-      objectReference: {fileID: 1995499690}
+      objectReference: {fileID: 1764839380}
     - target: {fileID: 2408850552391095601, guid: a1f0311c3b69e3c44be3acb335e863dd, type: 3}
       propertyPath: letterPanel
       value: 

@@ -21,6 +21,14 @@ public class clockUI : MonoBehaviour {
         clockManager.SetActive(true);
     }
 
+    public void resetClock() {
+        clockManager.SetActive(false);
+        elapsedTime = 0f;
+        hours = 0;
+        timerText.text = "00:00 AM";
+        startClock();
+    }
+
     void Update() {
         if (hours >= 6) {
             nightEnd?.Invoke();

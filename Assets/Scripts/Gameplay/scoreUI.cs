@@ -16,11 +16,14 @@ public class scoreUI : MonoBehaviour {
         interactionManager.SetActive(true);
     }
 
-    private void scoreLabelSwap(){
-        if (dayTotalLabel.enabled == true) {
-            scoreLabel.enabled = false;
-        }
+    public void enableScoreLabel() {
+        scoreLabel.enabled = true;
     }
+
+    public void disableTotalLabel() {
+        dayTotalLabel.enabled = false;
+    }
+
     private void Update() {
         if (feedManager != null && scoreLabel != null) {
             scoreLabel.text = "P" + feedManager.getTotalEarnings();

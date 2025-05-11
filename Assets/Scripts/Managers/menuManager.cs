@@ -16,4 +16,8 @@ public class menuManager : MonoBehaviour
     public void toggleDayEndMenu() {
         dayEndMenu.SetActive(true);
     }
+
+    public void toggleOffDayEndMenu() {
+        dayEndMenu.SetActive(false);
+    }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class feedInstancing : MonoBehaviour {
     [SerializeField] private float minDelay;
@@ -11,6 +12,7 @@ public class feedInstancing : MonoBehaviour {
     public List<GameObject> dayOne;
     public List<GameObject> dayTwo;
     public List<GameObject> dayThree;
+    public UnityEvent whenNextDay;
 
     private List<postStats> allPostStats = new List<postStats>();
     private List<List<GameObject>> allDays;
@@ -26,6 +28,10 @@ public class feedInstancing : MonoBehaviour {
     }
 
     public void beginDay() {
+        if (!feedManager.activeSelf) {
+            feedManager.SetActive(true);
+        }
+
         StartCoroutine(postSpawning());
     }
 
@@ -63,7 +69,20 @@ public class feedInstancing : MonoBehaviour {
     }
 
     public void nextDay() {
+        clearContentChildren();
         currentDayIndex = (currentDayIndex + 1) % allDays.Count;
-        Debug.Log($"Day indexed to: {currentDayIndex + 1}");
+        whenNextDay?.Invoke();
     }
+
+    private void clearContentChildren() {
+        List<Transform> children = new List<Transform>();
+        foreach (Transform child in content) {
+            children.Add(child);
+        }
+
+        foreach (Transform child in children) {
+            child.gameObject.SetActive(false);
+        }
+    }
+
 }
