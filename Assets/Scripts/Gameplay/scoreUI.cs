@@ -29,8 +29,8 @@ public class scoreUI : MonoBehaviour {
             scoreLabel.text = "P" + feedManager.getTotalEarnings();
         }
 
-        if (dayTotalLabel.enabled == true) {
-            scoreLabel.enabled = false;
-        }
+        //if (dayTotalLabel.enabled == true) {
+            //scoreLabel.enabled = false;
+        //}
     }
 }

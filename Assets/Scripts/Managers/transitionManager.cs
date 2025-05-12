@@ -44,6 +44,7 @@ public class transitionManager : MonoBehaviour
     }
 
     public void fadeOut(){
+        canvasGroup.gameObject.SetActive(false);
         _fadeout = true;
     }
 

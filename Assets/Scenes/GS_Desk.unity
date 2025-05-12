@@ -843,8 +843,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 10
     m_Right: 10
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 4
+    m_Bottom: 4
   m_ChildAlignment: 1
   m_Spacing: 4
   m_ChildForceExpandWidth: 1
@@ -1203,8 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d879ec192600d49a1ed95c56c3e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDelay: 5
-  maxDelay: 10
+  minDelay: 1
+  maxDelay: 1
   content: {fileID: 640800066}
   feedManager: {fileID: 775576859}
   dayOne:
@@ -1250,18 +1250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 588926681}
-        m_TargetAssemblyTypeName: clockUI, Assembly-CSharp
-        m_MethodName: resetClock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  currentDayIndex: 0
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 375.00006, y: -908.96124}
+  m_AnchoredPosition: {x: 375.00006, y: -872.96124}
   m_SizeDelta: {x: 75, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133763320
@@ -2486,7 +2475,7 @@ GameObject:
   - component: {fileID: 1465649501}
   - component: {fileID: 1465649502}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2813,7 +2802,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  realTimeToGameHours: 0.5
+  realTimeToGameHours: 4
   clockManager: {fileID: 1584303922}
   nightEnd:
     m_PersistentCalls:
@@ -3564,9 +3553,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1539467730}
-        m_TargetAssemblyTypeName: menuManager, Assembly-CSharp
-        m_MethodName: toggleOffDayEndMenu
+      - m_Target: {fileID: 194311473}
+        m_TargetAssemblyTypeName: GS_audioManager, Assembly-CSharp
+        m_MethodName: playPageTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3615,6 +3604,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6491654257575477687}
         m_TargetAssemblyTypeName: scoreUI, Assembly-CSharp
         m_MethodName: enableScoreLabel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1539467730}
+        m_TargetAssemblyTypeName: menuManager, Assembly-CSharp
+        m_MethodName: toggleOffDayEndMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3697,7 +3698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 375, y: -448.59}
+  m_AnchoredPosition: {x: 375, y: -430.59}
   m_SizeDelta: {x: 750, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032648036
@@ -3721,13 +3722,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "I trust you\u2019ve read the news on social media. Mayor of Sokay, D.R.R,
-    is running for the Presidency. \r\n\r\nPick out status posts that highlight D.R.R,
-    his mayoralty and Republika in a positive light. You may also come across posts
-    that share the reality of other candidates' uncouth behaviour. Amplify their
-    reach and create engagement with a repost or like. Lead opinion. \r\n\r\nWe\u2019ve
-    provided a router and SIM for you to use. You will be compensated in-line with
-    your performance.\r\n\r\nYou have 3 days until the election on Monday. Make those
-    hours count.\r\n\r\nTo God be the glory.\r\n\r\nFrom the desk of H.E. delos Santos\r\n"
+    is running for the Presidency. \r\n\r\nPick out status posts that highlight and
+    defend D.R.R, his mayoralty and Republika in a positive light. You may also come
+    across posts that take a knock other candidates. Amplify their reach and create
+    engagement with a repost or like. Lead opinion. \r\n\r\nWe\u2019ve provided a
+    router and SIM for you to use. You will be compensated in-line with your performance.\r\n\r\nYou
+    have 3 days until the election on Monday. Make those hours count.\r\n\r\nTo God
+    be the glory.\r\n\r\nFrom the desk of H.E. delos Santos\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
   m_sharedMaterial: {fileID: 7792915863378875972, guid: 99ceef68d2979d94cb23d910cfad40a0, type: 2}
