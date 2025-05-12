@@ -210,8 +210,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presidential Candidate Keon Villamiel canvasses CoM, pledging to his \u2018tsinelas
-    leadership\u2019 if elected on Monday"
+  m_text: "Presidential Candidate Keoni Villamiel canvasses CoM, pledging to her
+    \u2018tsinelas leadership\u2019 if elected on Monday and continue her historic
+    work as first female mayor of Naga City. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

@@ -17,7 +17,7 @@ public class feedInstancing : MonoBehaviour {
     private List<postStats> allPostStats = new List<postStats>();
     private List<List<GameObject>> allDays;
 
-    public int currentDayIndex = 0;
+    private int currentDayIndex = 0;
 
     private void Start() {
         allDays = new List<List<GameObject>> {
@@ -84,5 +84,4 @@ public class feedInstancing : MonoBehaviour {
             child.gameObject.SetActive(false);
         }
     }
-
 }
