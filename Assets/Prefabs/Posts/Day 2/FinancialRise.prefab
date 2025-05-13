@@ -231,7 +231,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "republika financial markets rose this week as election predictions suggest
     a strong mandate for the stronger next president d.r.r! incredible news\u2026
-    even fund managers and economists are #digongstrong!"
+    even fund managers and economists are <color=#224191>#digongstrong!</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

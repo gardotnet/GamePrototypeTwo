@@ -210,8 +210,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'First in Metro CoM: Facility for kids with special needs opens thanks
-    to funding from D.R.R and family'
+  m_text: 'FIRST in Metro CoM: Facility for kids with special needs opens THANKS
+    TO FUNDING FROM D.R.R AND FAMILY. Local families CELEBRATE at grand opening,
+    complete with surprise speech of support from D.R.R himself!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

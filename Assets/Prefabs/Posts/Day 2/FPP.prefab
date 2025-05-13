@@ -66,8 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Power vote for Maricar! Maricar for Favourite Pinoy Personality - Last
-    7hrs to vote ADN. Bayanihan na! #VoteMaricarFPP '
+  m_text: Power vote for Maricar! Maricar for Favourite Pinoy Personality - Last
+    7hrs to vote ADN. Bayanihan na! <color=#224191>#VoteMaricarFPP</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

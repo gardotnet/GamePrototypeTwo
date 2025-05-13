@@ -66,9 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@TheRepublikaPrint
-
-'
+  m_text: '@TheRepublikaPrint'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
   m_sharedMaterial: {fileID: 5265334970363988250, guid: 4923b083b12fe7243b7a94a813eb98ce, type: 2}
@@ -234,7 +232,7 @@ MonoBehaviour:
   m_text: "Lovi Geron releases statement condemning the drive-by shooting that hospitalised
     her mother in Metro C.O.M last night, calling it a \u201Ccowardly act of terror\u201D
     tied to unrest within the D.R.R. camp. Insiders say her vice presidential run
-    is now in jeopardy. See full here: republikaprint/report/201X/764327\u2026"
+    is now in jeopardy. See full here: <color=#224191>republikaprint/report/201X/764327\u2026</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

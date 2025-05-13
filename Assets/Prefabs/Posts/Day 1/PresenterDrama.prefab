@@ -66,9 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Backstage at Bb. Republika rehearsal: Rico Roxas seen chatting with Mikaela
-    Cruz... and word is, Marissa Santos wasn\u2019t too thrilled about it! Drama
-    brewing between the presenters? <color=#224191>#BbRepublika</color> "
+  m_text: "Rico Roxas seen chatting with Mikaela Cruz... and word is, Marissa Santos
+    wasn\u2019t too thrilled about it! Drama brewing between the presenters? <color=#224191>#BbRepublika</color> "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}

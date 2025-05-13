@@ -210,8 +210,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Impeach #GeronPowerGrabber! not my vice pres, she slept and paid her way
-    into the senate <color=#224191>@eagleeye_71</color>
+  m_text: Impeach <color=#224191>#GeronPowerGrabber</color>! not my vice pres, she
+    slept and paid her way into the senate <color=#224191>@eagleeye_71</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
   m_sharedMaterial: {fileID: 6507766503824136057, guid: bd2eca0a10f69554ba4a0a1dc37bda50, type: 2}
