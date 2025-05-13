@@ -1203,8 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d879ec192600d49a1ed95c56c3e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDelay: 4
-  maxDelay: 8.55
+  minDelay: 3
+  maxDelay: 7.5
   content: {fileID: 640800066}
   feedManager: {fileID: 775576859}
   dayOne:
@@ -1225,7 +1225,10 @@ MonoBehaviour:
   - {fileID: 4198038943442978963, guid: 0b399ab678aa4904caea7c4c6f9ca706, type: 3}
   - {fileID: 5247554340348590712, guid: 1d9d9bcec35fe554aad54c2449eb8908, type: 3}
   - {fileID: 5247554340348590712, guid: 2ae5393616574614cbd5f770bdc12be8, type: 3}
-  dayThree: []
+  dayThree:
+  - {fileID: 5247554340348590712, guid: 6f465857e5087b549a1dbf05a72ed057, type: 3}
+  - {fileID: 5247554340348590712, guid: d60b11203ef40a546ac836585b476ce4, type: 3}
+  - {fileID: 5247554340348590712, guid: 52627eeb84697fe40a8b718c565e0df9, type: 3}
   whenNextDay:
     m_PersistentCalls:
       m_Calls:
@@ -1253,6 +1256,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  currentDayIndex: 0
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +2808,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  realTimeToGameHours: 12.5
+  realTimeToGameHours: 8.5
   clockManager: {fileID: 1584303922}
   nightEnd:
     m_PersistentCalls:

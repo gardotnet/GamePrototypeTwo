@@ -17,7 +17,7 @@ public class feedInstancing : MonoBehaviour {
     private List<postStats> allPostStats = new List<postStats>();
     private List<List<GameObject>> allDays;
 
-    private int currentDayIndex = 0;
+    public int currentDayIndex = 0;
 
     private void Start() {
         allDays = new List<List<GameObject>> {
@@ -41,7 +41,7 @@ public class feedInstancing : MonoBehaviour {
     }
 
     private IEnumerator postSpawning() {
-        while (content.childCount < 14 && allDays[currentDayIndex].Count > 0) {
+        while (content.childCount < 8 && allDays[currentDayIndex].Count > 0) {
             float waitTime = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(waitTime);
             spawnPost();
@@ -69,19 +69,20 @@ public class feedInstancing : MonoBehaviour {
     }
 
     public void nextDay() {
+        if (!feedManager.activeSelf) {
+            feedManager.SetActive(true);
+        }
+
         clearContentChildren();
         currentDayIndex = (currentDayIndex + 1) % allDays.Count;
         whenNextDay?.Invoke();
     }
 
-    private void clearContentChildren() {
-        List<Transform> children = new List<Transform>();
-        foreach (Transform child in content) {
-            children.Add(child);
-        }
 
-        foreach (Transform child in children) {
-            child.gameObject.SetActive(false);
+    private void clearContentChildren() {
+        foreach (Transform child in content) {
+            Destroy(child.gameObject);
         }
     }
+
 }
