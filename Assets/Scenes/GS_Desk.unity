@@ -640,6 +640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 615063959}
   - {fileID: 341232747}
   - {fileID: 6491654257575477686}
   - {fileID: 194311465}
@@ -790,6 +791,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613087619}
   m_CullTransparentMesh: 1
+--- !u!1 &615063958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615063959}
+  - component: {fileID: 615063960}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &615063959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615063958}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.28066, y: 40.983463, z: -2.1423273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 456642819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615063960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615063958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74697545abfdc4845a613dd376fb09f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640800065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1297,21 @@ MonoBehaviour:
       - m_Target: {fileID: 1584303924}
         m_TargetAssemblyTypeName: clockUI, Assembly-CSharp
         m_MethodName: resetClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  endGameplay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 615063960}
+        m_TargetAssemblyTypeName: sceneManager, Assembly-CSharp
+        m_MethodName: startFinalCutscene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3735,7 +3795,7 @@ MonoBehaviour:
   m_text: "I trust you\u2019ve read the news on social media. Mayor of Sokay, D.R.R,
     is running for the Presidency. \r\n\r\nPick out status posts that highlight and
     defend D.R.R, his mayoralty and Republika in a positive light. You may also come
-    across posts that take a knock other candidates. Amplify their reach and create
+    across posts that take a knock at other candidates. Amplify their reach and create
     engagement with a repost or like. Lead opinion. \r\n\r\nWe\u2019ve provided a
     router and SIM for you to use. You will be compensated in-line with your performance.\r\n\r\nYou
     have 3 days until the election on Monday. Make those hours count.\r\n\r\nTo God

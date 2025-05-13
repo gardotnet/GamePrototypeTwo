@@ -13,6 +13,7 @@ public class feedInstancing : MonoBehaviour {
     public List<GameObject> dayTwo;
     public List<GameObject> dayThree;
     public UnityEvent whenNextDay;
+    public UnityEvent endGameplay;
 
     private List<postStats> allPostStats = new List<postStats>();
     private List<List<GameObject>> allDays;
@@ -75,7 +76,12 @@ public class feedInstancing : MonoBehaviour {
 
         clearContentChildren();
         currentDayIndex = (currentDayIndex + 1) % allDays.Count;
-        whenNextDay?.Invoke();
+        if (currentDayIndex == 2) {
+            endGameplay?.Invoke();
+        }
+        else {
+            whenNextDay?.Invoke();
+        }
     }
 
 

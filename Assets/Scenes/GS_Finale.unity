@@ -8875,7 +8875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1967286678931834da436d07fdbc7a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.00025
+  textSpeed: 0.025
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
