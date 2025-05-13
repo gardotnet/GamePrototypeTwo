@@ -1203,8 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d879ec192600d49a1ed95c56c3e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDelay: 5
-  maxDelay: 8
+  minDelay: 4
+  maxDelay: 8.55
   content: {fileID: 640800066}
   feedManager: {fileID: 775576859}
   dayOne:
@@ -1223,6 +1223,8 @@ MonoBehaviour:
   - {fileID: 7917806468784501863, guid: 5d1210941b2a35946bdfc8085180a7a4, type: 3}
   - {fileID: 4198038943442978963, guid: 7664132045de7374ebde2a27e5eb91a2, type: 3}
   - {fileID: 4198038943442978963, guid: 0b399ab678aa4904caea7c4c6f9ca706, type: 3}
+  - {fileID: 5247554340348590712, guid: 1d9d9bcec35fe554aad54c2449eb8908, type: 3}
+  - {fileID: 5247554340348590712, guid: 2ae5393616574614cbd5f770bdc12be8, type: 3}
   dayThree: []
   whenNextDay:
     m_PersistentCalls:
@@ -1251,7 +1253,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  currentDayIndex: 0
 --- !u!1 &818974565
 GameObject:
   m_ObjectHideFlags: 0
