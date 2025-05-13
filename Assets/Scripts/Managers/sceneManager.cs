@@ -10,4 +10,8 @@ public class sceneManager : MonoBehaviour
     public void startGameplay(){
         SceneManager.LoadScene(2);
     }
+
+    public void goToMenu() {
+        SceneManager.LoadScene(0);
+    }
 }

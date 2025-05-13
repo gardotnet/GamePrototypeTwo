@@ -11,6 +11,7 @@ public class dialogueInstancing : MonoBehaviour {
     [SerializeField] private dialogueTyping dialogueTyping;
     [SerializeField] private GameObject continuePrefab;
     [SerializeField] private GameObject bookendPrefab;
+    [SerializeField] private GameObject prefabToInstantiate;
     [SerializeField] private CS_audioManager CS_audioManager;
 
     [SerializeField] private float endDelay = 3f;
@@ -98,17 +99,26 @@ public class dialogueInstancing : MonoBehaviour {
         continueButton.SetActive(true);
     }
 
-    void endDialogue() {
-        GameObject endButton = Instantiate(bookendPrefab, content);
+    void endDialogue(GameObject prefabToInstantiate) {
+        GameObject endButton = Instantiate(prefabToInstantiate, content);
         Button buttonComponent = endButton.GetComponent<Button>();
         if (buttonComponent != null) {
             buttonComponent.onClick.AddListener(() => {
                 CS_audioManager.playShortBeep();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+                int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                if (nextSceneIndex < SceneManager.sceneCountInBuildSettings) {
+                    SceneManager.LoadScene(nextSceneIndex);
+                }
+                else {
+                    return;
+                }
             });
         }
     }
-    
+
+
+
 
     void continueNext() {
         GameObject continueButton = GameObject.FindWithTag("Continue");
@@ -126,6 +136,6 @@ public class dialogueInstancing : MonoBehaviour {
 
     private IEnumerator endingDialogue() {
         yield return new WaitForSeconds(endDelay);
-        endDialogue();
+        endDialogue(prefabToInstantiate);
     }
 }
